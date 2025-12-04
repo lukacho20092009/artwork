@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artist Portfolio & Shop</title>
+<link rel="icon" href="imgs/logo.svg" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="burger" id="burger">
+    <div></div><div></div><div></div>
+  </div>
+
+<nav id="nav">
+  <a href="#home" data-i18n="nav.home" class="active">Home</a>
+  <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+  <a href="#order" data-i18n="nav.order">Order</a>
+  <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+
+</nav>
+
+  <div class="logo-lang">
+    <div class="lang-selector">
+      <span>Language</span>
+      <div class="lang-popup" id="lang-popup">
+        <button data-lang="en">🇬🇧 English</button>
+        <button data-lang="ka">🇬🇪 ქართული</button>
+        <button data-lang="es">🇪🇸 Español</button>
+        <button data-lang="ru">🇷🇺 Русский</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero" id="home">
+    <video autoplay muted loop playsinline class="hero-video hero-video-desktop">
+        <source src="imgs/enhancedvid.mp4" type="video/mp4">
+    </video>
+
+    <video autoplay muted loop playsinline class="hero-video hero-video-mobile">
+        <source src="enhanced2.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-text">
+        <h1 data-i18n="hero.title"> David Gelbakhiani Arts</h1>
+        <p data-i18n="hero.subtitle">Discover emotional and expressive paintings that capture the essence of color and soul.</p>
+
+<div class="href">
+      <a href="#gallery" class="cta-btn" data-i18n="hero.cta">View Gallery</a>
+    <a href="#contact" class="cta-btn" data-i18n="hero.atc">Contact</a>
+</div>
+
+  </div>
+
+<div class="container">
+<a href="#gallery" class="card-link">
+    <div class="card">
+        <div class="card-image">
+            <img src="imgs/1.jpg" alt="">
+        </div>
+        <div class="card-content">
+            <h3>Gallery</h3>
+        </div>
+    </div>
+</a>
+
+<a href="#order" class="card-link">
+    <div class="card">
+        <div class="card-image">
+            <img src="imgs/11.jpg" alt="">
+        </div>
+        <div class="card-content">
+            <h3>Print pictures</h3>
+        </div>
+    </div>
+</a>
+
+<a href="#cloth-gallery" class="card-link">
+    <div class="card">
+        <div class="card-image">
+            <img src="imgs/first-imgs/a1.png" alt="">
+        </div>
+        <div class="card-content">
+            <h3>Print on clothes</h3>
+        </div>
+    </div>
+</a>
+
+<a href="#about" class="card-link">
+    <div class="card">
+        <div class="card-image">
+            <img src="imgs/artist-img.jpg" alt="">
+        </div>
+        <div class="card-content">
+            <h3>About the Artist</h3>
+        </div>
+    </div>
+</a>
+
+</div>
+<br><br><br><br>
+</section>
+
+<br>
+<section id="gallery">
+  <h2 class="gallery-title" data-i18n="nav.gallery">Gallery</h2>
+  <div class="gallery" id="gallery-list"></div>
+</section>
+
+<br>
+
+<section id="cloth-gallery">
+  <h2 class="gallery-title cloth" data-i18n="nav.print-on-cloth">Print on Cloth</h2>
+  <div class="gallery" id="cloth-gallery-list"></div>
+</section>
+
+<div class="order-title" id="order">Order by size</div>
+<br> <br> <br>
+
+<div class="art-section" >Order by </h2>
+  <h2>Customize Your Painting</h2>
+  <p>Adjust size to see price and resolution update automatically.</p>
+  
+
+<img src="imgs/5.jpg" alt="Painting" id="paintingSlider" class="painting">
+
+  <div class="slider-container">
+    <label for="sizeRange">Size (cm)</label>
+    <input type="range" id="sizeRange" min="30" max="100" step="10" value="30">
+  </div>
+  
+<div class="unit-toggle">
+  <span>Units:</span>
+  <select id="unitSelect">
+    <option value="cm">cm</option>
+    <option value="ft">ft</option>
+  </select>
+</div>
+
+  <div class="info">
+    <div class="size">Selected size: <span id="sizeValue">30</span> cm</div>
+    <div class="resolution">Resolution: <span id="resValue">3000 x 2000</span> px</div>
+    <div class="price">Price: $<span id="priceValue">100</span></div>
+  </div>
+  <div class="contact-btn-wrapper">
+  <button id="scrollToContact" class="contact-btn">
+Contact us to order  </button>
+</div>
+
+</div>
+ 
+<br>
+
+<section class="about" id="about">
+  <div class="about-wrapper">
+    <div class="about-image">
+      <img src="imgs/about.jpg" alt="Artist Portrait">
+    </div>
+    
+    <div class="about-text">
+      <h2>About the Artist</h2>
+      <p>
+        <strong>David Gelbakhiani</strong> is a contemporary artist whose creations transcend the boundaries 
+        between reality and imagination. His work captures emotion through bold textures, subtle light, 
+        and a balance of chaos and calm.
+      </p>
+      <p>
+        Over the years, his art has evolved into a visual dialogue between the soul and the canvas — 
+        reflecting dreams, silence, and movement. Each piece he creates is not just to be seen, 
+        but *felt* deeply.
+      </p>
+       <a href="#gallery" class="about-btn">Explore Gallery</a>
+    </div>
+  </div> 
+  
+  <br>
+
+  <div class="container about-card-container">
+    <a href="artist-works.html" class="card-link">
+      <div class="card">
+        <div class="card-image">
+          <img src="" alt="Gallery Preview">
+        </div>
+        <div class="card-content">
+          <h3>Artist's work <br> Videos</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+<section class="contact-section" id="contact">
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h2 data-i18n="contact.title">Contact Us</h2>
+      <p data-i18n="contact.subtitle">
+        We'd love to hear from you. Reach out for commissions, collaborations, or inquiries.
+      </p>
+
+      <div class="info-item">
+        <i class="icon-phone">📞</i>
+        <span data-i18n="contact.phone">Phone:</span>
+        <a href="tel:+995555123456">+995 555 123 456</a>
+      </div>
+
+      <div class="info-item">
+        <i class="icon-email">📧</i>
+        <span data-i18n="contact.email">Email:</span>
+        <a href="mailto:gelba30@gmail.com">gelba30@gmail.com</a>
+      </div>
+
+      <div class="info-item">
+        <i class="icon-location">📍</i>
+        <span data-i18n="contact.location">Location:</span>
+        <span>Tbilisi, Georgia</span>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100066798437526" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/gelbakh/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+<!-- 
+    <form class="contact-form" action="send-email.php" method="POST">
+      <h3 data-i18n="contact.form_title">Send a Message</h3>
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required data-i18n-placeholder="contact.name_placeholder">
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required data-i18n-placeholder="contact.email_placeholder">
+      </div>
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" placeholder="Subject" required data-i18n-placeholder="contact.subject_placeholder">
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required data-i18n-placeholder="contact.message_placeholder"></textarea>
+      </div>
+      <button type="submit" class="submit-btn" data-i18n="contact.send_button">Send Message</button>
+    </form>
+  </div> -->
+</section>
+
+
+<script src="script.js"></script>
+<script src="your-script.js"></script>
+</body>
+</html>

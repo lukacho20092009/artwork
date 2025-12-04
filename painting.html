@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artist Portfolio & Shop</title>
+<link rel="icon" href="imgs/logo.svg" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<header>
+<div class="brand">
+  <div class="logo">Dav</div>
+  <span class="brand-text">Art</span>
+</div>
+
+<button class="back-btn" onclick="window.location.href='index.html#gallery-title'">
+  Back to Gallery
+</button>
+</header>
+
+<section class="painting-section">
+  <div class="painting-image">
+    <img id="painting-img" src="your-image.jpg" alt="Painting" onclick="openModal()">
+  </div>
+  
+  <div class="painting-info">
+    <h1 id="painting-title">Painting Title</h1>
+    <div class="price" id="painting-price">$0</div>
+    <p id="painting-desc">This is a detailed description of the painting — its story, emotion, and artistic style.</p>
+    <div class="buttons">
+      <button class="buy-btn" onclick="window.location.href='index.html#contact'">Buy Now</button>
+<button class="back-btn" onclick="window.location.href='index.html#gallery-title'">
+  Back to Gallery
+</button>
+    </div>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-bg" onclick="closeModal()"></div>
+  <div class="modal-content-container">
+    <img id="modal-img" class="modal-img">
+    <div class="modal-info">
+      <h1 id="modal-title">Painting Title</h1>
+      <div class="modal-price" id="modal-price">$0</div>
+      <p id="modal-desc">This is a detailed description of the painting — its story, emotion, and artistic style.</p>
+    </div>
+  </div>
+  <span class="close" onclick="closeModal()">&times;</span>
+</div>
+
+<div class="painting-view">
+  <img id="main-painting" class="main-img" src="" alt="Painting" style="display:none;">
+  <div class="carousel-box" id="carousel-box">
+
+  </div>
+</div>
+
+<div id="carousel-modal" class="carousel-modal">
+  <span id="carousel-modal-close" class="modal-close">&times;</span>
+  <img id="carousel-modal-img" class="carousel-modal-img" src="" alt="Zoomed Image">
+</div>
+
+
+<script src="your-script.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
